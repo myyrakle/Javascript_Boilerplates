@@ -18,3 +18,8 @@ function getCookie(cookie_name)
     }
     return "";
 }
+
+function setCookie(cookieName, cookieValue) 
+{
+    window.document.cookie = `${cookieName}=${cookieValue}`;
+}
