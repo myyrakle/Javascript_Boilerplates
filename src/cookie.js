@@ -21,5 +21,5 @@ function getCookie(cookie_name)
 
 function setCookie(cookieName, cookieValue) 
 {
-    window.document.cookie = `${cookieName}=${cookieValue}`;
+    window.document.cookie = `${cookieName}=${cookieValue}; expires=${1000}`; //수정 필요
 }
