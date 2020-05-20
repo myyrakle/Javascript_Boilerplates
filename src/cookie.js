@@ -19,7 +19,7 @@ function getCookie(cookie_name)
     return "";
 }
 
-function setCookie(cookieName, cookieValue) 
+function setCookie(cookieName, cookieValue, option) 
 {
     window.document.cookie = `${cookieName}=${cookieValue}; expires=${1000}`; //수정 필요
 }
