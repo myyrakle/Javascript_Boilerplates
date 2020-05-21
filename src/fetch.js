@@ -1,9 +1,9 @@
-async function fetchPost(url, body)
+async function fetchPost(url, option={})
 {
       const response = await fetch(url, {
           method:'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(body)
+          headers: JSON.stringify(option.header),
+          body: JSON.stringify(option.body)
       });
 
       return response;
