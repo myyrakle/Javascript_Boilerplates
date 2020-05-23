@@ -19,7 +19,11 @@ function getCookie(cookie_name)
     return "";
 }
 
-function setCookie(cookieName, cookieValue, option) 
+function setCookie(cookieName, cookieValue, minute, option) 
 {
-    window.document.cookie = `${cookieName}=${cookieValue}; expires=${1000}`; //수정 필요
+    let toMilliSecond = minute * 1000 /*밀리초->초*/ * 60 /*초->분*/;
+
+    let date = new Date();
+    date.setDate(date.getTime()+toMilliSecond);
+    window.document.cookie = `${cookieName}=${cookieValue}; expires=${date.toUTCString()}; path=/`;
 }
