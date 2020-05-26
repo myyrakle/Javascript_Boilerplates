@@ -2,7 +2,7 @@ async function fetchGet(url, option={})
 {
       const response = await fetch(url, {
           method:'GET',
-          headers: JSON.stringify(option.header)
+          headers: option.headers
       });
 
       return response;
@@ -13,7 +13,7 @@ async function fetchPost(url, option={})
 {
       const response = await fetch(url, {
           method:'POST',
-          headers: JSON.stringify(option.header),
+          headers: option.headers,
           body: JSON.stringify(option.body)
       });
 
