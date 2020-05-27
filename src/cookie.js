@@ -27,3 +27,6 @@ function setCookie(cookieName, cookieValue, minute, option)
     date.setDate(date.getTime()+toMilliSecond);
     window.document.cookie = `${cookieName}=${cookieValue}; expires=${date.toUTCString()}; path=/`;
 }
+
+function removeCookie(cookiename)
+{}
