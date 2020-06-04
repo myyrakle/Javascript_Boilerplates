@@ -43,3 +43,7 @@ function isObject(value)
   return value === Object(value);
 }
 
+function isFunction(value)
+{
+  return value instanceof Function;
+}
