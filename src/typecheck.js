@@ -5,7 +5,7 @@ function isString(value)
 
 function isNumber(value)
 {
-  return value instanceof Number;
+  return value === Number(value);
 }
 
 function isInteger(value)
