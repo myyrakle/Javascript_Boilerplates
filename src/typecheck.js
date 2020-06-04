@@ -1,6 +1,6 @@
 function isString(value)
 {
-  return value instanceof String;
+  return value === String(value);
 }
 
 function isNumber(value)
