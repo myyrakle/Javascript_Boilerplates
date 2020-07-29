@@ -1,5 +1,5 @@
 function lcm(n1, n2) {
-  const function _gcd(a, b){
+  function _gcd(a, b){
     if (!b) {
       return a;
     }
