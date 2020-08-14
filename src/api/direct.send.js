@@ -6,7 +6,7 @@ async function send(phone, text) {
         title: "title",
         message: null,
         sender: "01044455555",
-        username: "mom2020",
+        username: "아이디",
         receiver: [{ name: "unknown", mobile: null }],
         key: "API 키값...",
     };
