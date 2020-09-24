@@ -1,4 +1,4 @@
-export function login(id, password) {
+function login(id, password) {
     const user = new CognitoUser({ Username: id, Pool: userPool });
 
     return new Promise((resolve, reject) => {
