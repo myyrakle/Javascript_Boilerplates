@@ -29,3 +29,11 @@ function makeExcel(list)
   
   return workbook;
 }
+
+/*
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats');
+    res.setHeader('Content-Disposition', 'attachment; filename=download.xlsx');
+    await workbook.xlsx.write(res);
+    res.end();
+
+*/
