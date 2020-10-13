@@ -11,7 +11,7 @@ function fibonacci(n){
         }
 
         if(!arr[n]){
-            arr[n] = fibonacci(n-1) + fibonacci(n - 2);
+            arr[n] = _fibonacci(n-1) + _fibonacci(n - 2);
         }
         
         return arr[n];
