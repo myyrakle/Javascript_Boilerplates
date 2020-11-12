@@ -21,9 +21,9 @@ async function sendCMSExcel(response, list, columns)
         cell.fill = {
           type: 'pattern',
           pattern: 'solid',
-          fgColor: { argb:'D9D9D9' }
+          fgColor: { argb:'D9D9D9' } //회색
         };
-        cell.font = { bold: true };
+        cell.font = { bold: true }; //볼트체
       })
     }
   });
@@ -33,3 +33,14 @@ async function sendCMSExcel(response, list, columns)
   await workbook.xlsx.write(response);
   response.end();
 }
+
+/* Example
+  
+  app.get('/download', async (req, res)=>{
+    //...
+    
+    const selectResult = await req.sequalize.query(`select no, name, age from tb_person`);
+    await sendCMSExcel(res, selectResult, [{header:'번호', key:'no', width:5}, {header:'이름', key:'name', width:10}, {header:'나이', key:'age', width:10}]);
+    // done
+  });
+*/
