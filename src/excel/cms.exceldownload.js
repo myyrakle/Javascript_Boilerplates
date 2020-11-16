@@ -1,4 +1,5 @@
 const {Workbook} = require('exceljs');
+// const { Workbook } = require("exceljs-lightweight");
 
 // 엑셀 파일을 생성해 전송합니다.
 //
@@ -24,6 +25,12 @@ async function sendCMSExcel(response, list, columns)
           fgColor: { argb:'D9D9D9' } //회색
         };
         cell.font = { bold: true }; //볼트체
+        cell.border = { //테두리
+          top: { style: "thin" },
+          left: { style: "thin" },
+          right: { style: "thin" },
+          bottom: { style: "thin" },
+        };
       })
     }
   });
