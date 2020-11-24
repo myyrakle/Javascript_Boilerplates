@@ -1,3 +1,6 @@
+// 왼쪽이 작으면 -1
+// 같으면 0
+// 오른쪽이 크면 1
 function compareSemver(lhs, rhs)
 {
     const l = lhs.split('.').map(Number);
@@ -20,4 +23,19 @@ function compareSemver(lhs, rhs)
         }
     }
     return 0;
+}
+
+function lessThanSemver(lhs, rhs)
+{
+    return compareSemver(lhs, rhs) == -1;
+}
+
+function greaterThanSemver(lhs, rhs)
+{
+    return compareSemver(lhs, rhs) == 1;
+}
+
+function equalSemver(lhs, rhs)
+{
+    return compareSemver(lhs, rhs) == 0;
 }
