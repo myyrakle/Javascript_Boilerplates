@@ -1,10 +1,23 @@
 function compareSemver(lhs, rhs)
 {
-    const l = semver.split('.').map(Number);
-    const r = semver.split('.').map(Number);
-    for(const e of eachVersions)
+    const l = lhs.split('.').map(Number);
+    const r = rhs.split('.').map(Number);
+
+    const len = l.length > r.length ? l.length : r.length;
+
+    for(let i = 0; i<len; i++)
     {
-        if(
+        let lversion = l[i] || 0;
+        let rversion = r[i] || 0;
+
+        if(lversion < rversion) 
+        {
+ㅤ           return -1;
+        }
+        if(lversion > rversion) 
+        {
+ㅤ           return 1;
+        }
     }
     return 0;
 }
