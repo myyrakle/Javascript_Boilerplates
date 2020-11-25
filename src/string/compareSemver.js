@@ -42,3 +42,8 @@ function equalSemver(lhs, rhs)
 {
     return compareSemver(lhs, rhs) == 0;
 }
+
+// example
+// compareSemver("1.2.0", "1.2.1"); // -1
+// lessThanSemver("1.3", "1.2.1"); // false
+//
