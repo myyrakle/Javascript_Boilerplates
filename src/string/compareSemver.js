@@ -25,16 +25,19 @@ function compareSemver(lhs, rhs)
     return 0;
 }
 
+// 왼쪽이 작으면 true
 function lessThanSemver(lhs, rhs)
 {
     return compareSemver(lhs, rhs) == -1;
 }
 
+// 왼쪽이 크면 true
 function greaterThanSemver(lhs, rhs)
 {
     return compareSemver(lhs, rhs) == 1;
 }
 
+// 같으면 true
 function equalSemver(lhs, rhs)
 {
     return compareSemver(lhs, rhs) == 0;
